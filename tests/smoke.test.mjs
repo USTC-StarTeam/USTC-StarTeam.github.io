@@ -15,6 +15,9 @@ test('homepage ships the required static files and core identity', async () => {
   assert.match(html, /中国科学技术大学|USTC/);
   assert.match(html, /National Key Laboratory of Cognitive Intelligence|认知智能全国重点实验室/);
   assert.match(html, /Wang Hao|王皓/);
+  assert.match(html, /陈恩红教授/);
+  assert.match(html, /国家杰出青年科学基金获得者/);
+  assert.doesNotMatch(html, /硕士生导师/);
   assert.match(html, /https:\/\/github\.com\/USTC-StarTeam/);
   assert.match(css, /@media\s*\(max-width:\s*760px\)/);
   assert.match(js, /const repositories = \[/);
